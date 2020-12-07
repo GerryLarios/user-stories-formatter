@@ -1,7 +1,5 @@
 # Slack App - User stories
 
-## Slack App - User stories
-
 ## Login Improvements
 
 **[FEATURE] - As an admin user, I would like to login into the admin panel to keep private data from the outside**
