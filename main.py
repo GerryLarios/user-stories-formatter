@@ -16,7 +16,8 @@ lines = original_file.readlines()
 output_file = open(output_file_name, "w+")
 
 def write(text):
-    output_file.write(text + "\n")
+    output_file.write(text + os.linesep)
+    output_file.write(os.linesep)
 
 set_title = False
 inside_list = False
@@ -35,10 +36,10 @@ for line in lines:
             set_title = True
        
         if re.search(lists, current_line):
-            write(f"** {current_line} **")
+            write(f"**{current_line}**")
             inside_list = True
         elif re.search(types, current_line):
-            write(f"** {current_line[current_line.find('['):]} **")
+            write(f"**{current_line[current_line.find('['):]}**")
             inside_list = False 
         elif inside_list:
             write(f"- {current_line}")
